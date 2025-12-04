@@ -1,0 +1,159 @@
+/* ПРАКТИКА 24: Стили для компонента RoadmapImporter */
+
+.roadmap-importer {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.roadmap-importer h2 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.importer-description {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.import-success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #4caf50;
+  font-weight: 500;
+}
+
+.importer-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.select-all-button,
+.import-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.select-all-button {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.select-all-button:hover {
+  background: #e0e0e0;
+}
+
+.import-button {
+  background: #4caf50;
+  color: white;
+}
+
+.import-button:hover:not(:disabled) {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.import-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.technologies-library {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.library-tech-card {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+}
+
+.library-tech-card:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.library-tech-card.selected {
+  border-color: #4caf50;
+  background: #f1f8f4;
+}
+
+.tech-checkbox {
+  font-size: 1.5em;
+  flex-shrink: 0;
+}
+
+.tech-content {
+  flex: 1;
+}
+
+.tech-content h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.tech-desc {
+  margin: 0 0 12px 0;
+  color: #666;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.tech-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-category {
+  padding: 4px 12px;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.tech-difficulty {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.difficulty-easy {
+  background: #c8e6c9;
+  color: #2e7d32;
+}
+
+.difficulty-medium {
+  background: #ffe0b2;
+  color: #e65100;
+}
+
+.difficulty-hard {
+  background: #ffcdd2;
+  color: #c62828;
+}
+

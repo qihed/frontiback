@@ -10,7 +10,7 @@ function TaskList() {
       <h2>Список задач</h2>
       <ul>
         {tasks.map((task) => (
-          <li key={task.id} className={task.comleted ? "completed" : "pending"}>
+          <li key={task.id} className={task.completed ? "completed" : "pending"}>
             <span>{task.title}</span>
             {task.completed ? "✅" : "⏳"}
           </li>

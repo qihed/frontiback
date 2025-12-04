@@ -1,0 +1,55 @@
+/* ПРАКТИКА 21: Стили для компонента TechnologyNotes */
+
+.technology-notes {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.notes-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95em;
+}
+
+.notes-textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95em;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.notes-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.notes-footer {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85em;
+}
+
+.notes-saved {
+  color: #4caf50;
+  font-weight: 500;
+}
+
+.notes-empty {
+  color: #999;
+  font-style: italic;
+}
+
+.notes-count {
+  color: #666;
+}
+

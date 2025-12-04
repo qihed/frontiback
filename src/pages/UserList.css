@@ -1,0 +1,186 @@
+/* ПРАКТИКА 24: Стили для страницы UserList */
+
+.user-list-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.user-list-page h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.page-description {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+.loading-indicator {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-indicator {
+  background: #ffebee;
+  border: 2px solid #f44336;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.error-indicator h3 {
+  color: #c62828;
+  margin-bottom: 10px;
+}
+
+.error-indicator p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.retry-button {
+  padding: 12px 24px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.retry-button:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+}
+
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.users-count {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.refetch-button {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.refetch-button:hover {
+  background: #5568d3;
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.user-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.user-header {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.user-header h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 1.3em;
+}
+
+.username {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.user-info {
+  margin-bottom: 15px;
+}
+
+.user-info p {
+  margin: 8px 0;
+  color: #666;
+  font-size: 0.95em;
+}
+
+.user-address,
+.user-company {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.address-label,
+.company-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.address-text {
+  color: #666;
+  font-size: 0.9em;
+  margin: 3px 0;
+}
+
+.company-name {
+  font-weight: 600;
+  color: #333;
+  margin: 5px 0;
+}
+
+.company-catchphrase {
+  color: #999;
+  font-style: italic;
+  font-size: 0.85em;
+  margin: 5px 0;
+}
+

@@ -1,11 +1,44 @@
 /* базовые стили для приложения */
 .App {
- max-width: 1200px;
+ max-width: 1400px;
  margin: 0 auto;
  padding: 20px;
  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
  sans-serif;
+}
+
+/* НОВОВВЕДЕНИЕ: Переключатель режимов */
+.mode-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mode-btn {
+  padding: 12px 24px;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.mode-btn:hover {
+  background: #f5f5f5;
+}
+
+.mode-btn.active {
+  background: #667eea;
+  color: white;
 }
 /* стили для заголовка приложения (если используется) */
 .App-header {
@@ -124,5 +157,846 @@
 }
 .task-list span {
  flex: 1;
+ color: #333;
+}
+
+/* ПРАКТИКА 20: Стили для компонента Counter */
+.counter {
+ background: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 20px 0;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ text-align: center;
+}
+
+.counter h2 {
+ margin: 0 0 20px 0;
+ color: #333;
+}
+
+.counter-display {
+ margin: 20px 0;
+}
+
+.count-value {
+ font-size: 3em;
+ font-weight: bold;
+ color: #667eea;
+}
+
+.counter-buttons {
+ display: flex;
+ gap: 10px;
+ justify-content: center;
+ margin: 20px 0;
+}
+
+.counter-buttons button {
+ padding: 10px 20px;
+ font-size: 1.2em;
+ border: 2px solid #667eea;
+ background: white;
+ color: #667eea;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: all 0.2s;
+}
+
+.counter-buttons button:hover {
+ background: #667eea;
+ color: white;
+}
+
+.counter-info {
+ margin-top: 15px;
+ color: #666;
+}
+
+/* ПРАКТИКА 20: Стили для компонента ToggleButton */
+.toggle-button {
+ background: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 20px 0;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ text-align: center;
+}
+
+.toggle-button h2 {
+ margin: 0 0 20px 0;
+ color: #333;
+}
+
+.toggle-button button {
+ padding: 15px 30px;
+ font-size: 1.1em;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: all 0.3s;
+ font-weight: bold;
+}
+
+.toggle-on {
+ background: #4caf50;
+ color: white;
+}
+
+.toggle-off {
+ background: #e0e0e0;
+ color: #666;
+}
+
+.toggle-button button:hover {
+ transform: scale(1.05);
+}
+
+.toggle-message {
+ margin-top: 15px;
+ color: #4caf50;
+ font-weight: bold;
+}
+
+/* ПРАКТИКА 20: Стили для компонента InputField */
+.input-field {
+ background: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 20px 0;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-field h2 {
+ margin: 0 0 20px 0;
+ color: #333;
+}
+
+.input-container {
+ display: flex;
+ gap: 10px;
+ margin-bottom: 15px;
+}
+
+.input-container input {
+ flex: 1;
+ padding: 12px;
+ font-size: 1em;
+ border: 2px solid #e0e0e0;
+ border-radius: 5px;
+ transition: border-color 0.2s;
+}
+
+.input-container input:focus {
+ outline: none;
+ border-color: #667eea;
+}
+
+.input-container button {
+ padding: 12px 20px;
+ background: #667eea;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: background 0.2s;
+}
+
+.input-container button:hover:not(:disabled) {
+ background: #5568d3;
+}
+
+.input-container button:disabled {
+ background: #ccc;
+ cursor: not-allowed;
+}
+
+.input-display {
+ margin: 10px 0;
+ color: #666;
+}
+
+.input-length {
+ margin: 10px 0;
+ color: #999;
+ font-size: 0.9em;
+}
+
+/* ПРАКТИКА 21: Стили для компонента DocumentTitle */
+.document-title {
+ background: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 20px 0;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.document-title h2 {
+ margin: 0 0 20px 0;
+ color: #333;
+}
+
+.title-input-container {
+ margin: 15px 0;
+}
+
+.title-input-container label {
+ display: block;
+ margin-bottom: 8px;
+ color: #666;
+ font-weight: 500;
+}
+
+.title-input-container input {
+ width: 100%;
+ padding: 12px;
+ font-size: 1em;
+ border: 2px solid #e0e0e0;
+ border-radius: 5px;
+ transition: border-color 0.2s;
+}
+
+.title-input-container input:focus {
+ outline: none;
+ border-color: #667eea;
+}
+
+.title-info {
+ margin: 15px 0;
+ color: #666;
+}
+
+.title-hint {
+ margin: 10px 0;
+ color: #999;
+ font-size: 0.9em;
+ font-style: italic;
+}
+
+/* ПРАКТИКА 21: Стили для компонента Timer */
+.timer {
+ background: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 20px 0;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ text-align: center;
+}
+
+.timer h2 {
+ margin: 0 0 20px 0;
+ color: #333;
+}
+
+.timer-display {
+ margin: 30px 0;
+}
+
+.time-value {
+ font-size: 4em;
+ font-weight: bold;
+ color: #667eea;
+ font-family: 'Courier New', monospace;
+}
+
+.timer-controls {
+ display: flex;
+ gap: 10px;
+ justify-content: center;
+ margin: 20px 0;
+}
+
+.timer-controls button {
+ padding: 12px 24px;
+ font-size: 1.1em;
+ border: 2px solid #667eea;
+ background: white;
+ color: #667eea;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: all 0.2s;
+}
+
+.timer-controls button:hover {
+ background: #667eea;
+ color: white;
+}
+
+.timer-status {
+ margin-top: 15px;
+ color: #666;
+ font-size: 1.1em;
+}
+
+/* ПРАКТИКА 21: Стили для компонента WindowSize */
+.window-size {
+ background: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 20px 0;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.window-size h2 {
+ margin: 0 0 20px 0;
+ color: #333;
+}
+
+.size-display {
+ display: flex;
+ gap: 30px;
+ margin: 20px 0;
+}
+
+.size-item {
+ padding: 15px;
+ background: #f5f5f5;
+ border-radius: 5px;
+ flex: 1;
+}
+
+.size-item strong {
+ color: #667eea;
+}
+
+.size-info {
+ margin: 15px 0;
+ color: #666;
+ font-style: italic;
+}
+
+/* ПРАКТИКА 22: Стили для компонента ContactForm */
+.contact-form {
+ background: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 20px 0;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+ margin: 0 0 20px 0;
+ color: #333;
+}
+
+.success-message {
+ background: #e8f5e9;
+ color: #2e7d32;
+ padding: 15px;
+ border-radius: 5px;
+ margin-bottom: 20px;
+ border-left: 4px solid #4caf50;
+}
+
+.form-group {
+ margin-bottom: 20px;
+}
+
+.form-group label {
+ display: block;
+ margin-bottom: 8px;
+ color: #333;
+ font-weight: 500;
+}
+
+.required {
+ color: #f44336;
+}
+
+.form-group input,
+.form-group textarea {
+ width: 100%;
+ padding: 12px;
+ font-size: 1em;
+ border: 2px solid #e0e0e0;
+ border-radius: 5px;
+ transition: border-color 0.2s;
+ font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+ outline: none;
+ border-color: #667eea;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+ border-color: #f44336;
+}
+
+.error-message {
+ display: block;
+ color: #f44336;
+ font-size: 0.9em;
+ margin-top: 5px;
+}
+
+.submit-button {
+ padding: 12px 30px;
+ background: #667eea;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ font-size: 1.1em;
+ cursor: pointer;
+ transition: background 0.2s;
+}
+
+.submit-button:hover {
+ background: #5568d3;
+}
+
+/* ПРАКТИКА 23: Стили для компонента TodoList */
+.todo-list {
+ background: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 20px 0;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list h2 {
+ margin: 0 0 20px 0;
+ color: #333;
+}
+
+.todo-input-section {
+ display: flex;
+ gap: 10px;
+ margin-bottom: 20px;
+}
+
+.todo-input {
+ flex: 1;
+ padding: 12px;
+ font-size: 1em;
+ border: 2px solid #e0e0e0;
+ border-radius: 5px;
+}
+
+.todo-input:focus {
+ outline: none;
+ border-color: #667eea;
+}
+
+.add-button {
+ padding: 12px 24px;
+ background: #4caf50;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ font-size: 1em;
+ transition: background 0.2s;
+}
+
+.add-button:hover {
+ background: #45a049;
+}
+
+.todo-stats {
+ display: flex;
+ gap: 20px;
+ margin-bottom: 20px;
+ padding: 15px;
+ background: #f5f5f5;
+ border-radius: 5px;
+}
+
+.todo-stats span {
+ color: #666;
+ font-weight: 500;
+}
+
+.todos {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+.todo-item {
+ display: flex;
+ align-items: center;
+ gap: 15px;
+ padding: 15px;
+ margin: 10px 0;
+ background: #f9f9f9;
+ border-radius: 5px;
+ border-left: 4px solid #667eea;
+ transition: all 0.2s;
+}
+
+.todo-item.completed {
+ background: #e8f5e9;
+ border-left-color: #4caf50;
+ opacity: 0.7;
+}
+
+.todo-item.completed .todo-text {
+ text-decoration: line-through;
+ color: #666;
+}
+
+.todo-checkbox {
+ width: 20px;
+ height: 20px;
+ cursor: pointer;
+}
+
+.todo-text {
+ flex: 1;
+ color: #333;
+ cursor: pointer;
+}
+
+.todo-actions {
+ display: flex;
+ gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+ background: none;
+ border: none;
+ font-size: 1.2em;
+ cursor: pointer;
+ padding: 5px;
+ transition: transform 0.2s;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+ transform: scale(1.2);
+}
+
+.edit-mode {
+ display: flex;
+ gap: 10px;
+ flex: 1;
+ align-items: center;
+}
+
+.edit-input {
+ flex: 1;
+ padding: 8px;
+ border: 2px solid #667eea;
+ border-radius: 5px;
+}
+
+.save-button,
+.cancel-button {
+ padding: 8px 16px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ font-size: 0.9em;
+}
+
+.save-button {
+ background: #4caf50;
+ color: white;
+}
+
+.cancel-button {
+ background: #f44336;
+ color: white;
+}
+
+.empty-message {
+ text-align: center;
+ color: #999;
+ padding: 40px;
+ font-style: italic;
+}
+
+/* ПРАКТИКА 24: Стили для компонента TechnologyFilter */
+.technology-filter {
+ background: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 20px 0;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.technology-filter h2 {
+ margin: 0 0 20px 0;
+ color: #333;
+}
+
+.filter-panel {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: 15px;
+ margin-bottom: 20px;
+ padding: 20px;
+ background: #f5f5f5;
+ border-radius: 5px;
+}
+
+.filter-group {
+ display: flex;
+ flex-direction: column;
+}
+
+.filter-group label {
+ margin-bottom: 8px;
+ color: #333;
+ font-weight: 500;
+}
+
+.filter-group select,
+.filter-group input {
+ padding: 10px;
+ border: 2px solid #e0e0e0;
+ border-radius: 5px;
+ font-size: 1em;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+ outline: none;
+ border-color: #667eea;
+}
+
+.filter-stats {
+ margin-bottom: 20px;
+ padding: 15px;
+ background: #e3f2fd;
+ border-radius: 5px;
+}
+
+.filter-stats p {
+ margin: 0;
+ color: #1976d2;
+}
+
+.no-results {
+ text-align: center;
+ padding: 40px;
+ color: #999;
+}
+
+.technologies-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+ gap: 20px;
+ margin-bottom: 20px;
+}
+
+.tech-card {
+ background: white;
+ border: 2px solid #e0e0e0;
+ border-radius: 10px;
+ padding: 20px;
+ transition: all 0.2s;
+}
+
+.tech-card:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tech-card h3 {
+ margin: 0 0 15px 0;
+ color: #333;
+}
+
+.tech-info {
+ display: flex;
+ gap: 10px;
+ margin-bottom: 15px;
+ flex-wrap: wrap;
+}
+
+.tech-category {
+ padding: 5px 12px;
+ background: #e3f2fd;
+ color: #1976d2;
+ border-radius: 20px;
+ font-size: 0.9em;
+}
+
+.tech-difficulty {
+ padding: 5px 12px;
+ background: #fff3e0;
+ color: #f57c00;
+ border-radius: 20px;
+ font-size: 0.9em;
+}
+
+.tech-status {
+ padding: 8px 15px;
+ color: white;
+ border-radius: 5px;
+ text-align: center;
+ font-weight: 500;
+ font-size: 0.9em;
+}
+
+.filter-actions {
+ text-align: center;
+ margin-top: 20px;
+}
+
+.reset-filters-button {
+ padding: 12px 24px;
+ background: #f44336;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ font-size: 1em;
+ transition: background 0.2s;
+}
+
+.reset-filters-button:hover {
+ background: #d32f2f;
+}
+
+/* ПРАКТИКА 25: Стили для компонента DataImportExport */
+.data-import-export {
+ background: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin: 20px 0;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.data-import-export h2 {
+ margin: 0 0 20px 0;
+ color: #333;
+}
+
+.status-message {
+ padding: 15px;
+ border-radius: 5px;
+ margin-bottom: 20px;
+ font-weight: 500;
+}
+
+.status-message.success {
+ background: #e8f5e9;
+ color: #2e7d32;
+ border-left: 4px solid #4caf50;
+}
+
+.status-message.error {
+ background: #ffebee;
+ color: #c62828;
+ border-left: 4px solid #f44336;
+}
+
+.controls {
+ display: flex;
+ gap: 10px;
+ flex-wrap: wrap;
+ margin-bottom: 20px;
+}
+
+.controls button {
+ padding: 12px 24px;
+ background: #667eea;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ font-size: 1em;
+ transition: background 0.2s;
+}
+
+.controls button:hover:not(:disabled) {
+ background: #5568d3;
+}
+
+.controls button:disabled {
+ background: #ccc;
+ cursor: not-allowed;
+}
+
+.file-input-label {
+ padding: 12px 24px;
+ background: #4caf50;
+ color: white;
+ border-radius: 5px;
+ cursor: pointer;
+ font-size: 1em;
+ transition: background 0.2s;
+ display: inline-block;
+}
+
+.file-input-label:hover {
+ background: #45a049;
+}
+
+.drop-zone {
+ border: 3px dashed #ccc;
+ border-radius: 10px;
+ padding: 40px;
+ text-align: center;
+ margin-bottom: 20px;
+ transition: all 0.3s;
+ background: #fafafa;
+}
+
+.drop-zone.dragging {
+ border-color: #667eea;
+ background: #e3f2fd;
+}
+
+.drop-zone p {
+ margin: 0;
+ color: #666;
+ font-size: 1.1em;
+}
+
+.technologies-list {
+ margin-top: 20px;
+ padding: 20px;
+ background: #f5f5f5;
+ border-radius: 5px;
+}
+
+.technologies-list h3 {
+ margin: 0 0 15px 0;
+ color: #333;
+}
+
+.technologies-list ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+.technologies-list li {
+ padding: 10px;
+ margin: 5px 0;
+ background: white;
+ border-radius: 5px;
+ border-left: 4px solid #667eea;
+}
+
+/* ПРАКТИКА 26: Стили для Material-UI обертки */
+.mui-install-notice {
+ background: #fff3e0;
+ border: 2px solid #ff9800;
+ border-radius: 10px;
+ padding: 30px;
+ margin: 20px 0;
+ text-align: center;
+}
+
+.mui-install-notice h2 {
+ margin: 0 0 15px 0;
+ color: #e65100;
+}
+
+.mui-install-notice code {
+ display: block;
+ background: #fff;
+ padding: 15px;
+ border-radius: 5px;
+ margin: 15px 0;
+ font-family: 'Courier New', monospace;
  color: #333;
 }

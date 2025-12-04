@@ -1,0 +1,210 @@
+/* ПРАКТИКА 19: Стили для компонента TechnologyCard */
+
+.technology-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 5px solid #e0e0e0;
+  min-width: 280px;
+  max-width: 350px;
+}
+
+.technology-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* НОВОВВЕДЕНИЕ: Стили для разных статусов */
+.technology-card.status-completed {
+  border-left-color: #4caf50;
+  background: linear-gradient(to right, #e8f5e9 0%, white 10%);
+}
+
+.technology-card.status-in-progress {
+  border-left-color: #ff9800;
+  background: linear-gradient(to right, #fff3e0 0%, white 10%);
+}
+
+.technology-card.status-not-started {
+  border-left-color: #9e9e9e;
+  background: linear-gradient(to right, #f5f5f5 0%, white 10%);
+}
+
+.tech-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.tech-title {
+  margin: 0;
+  color: #333;
+  font-size: 1.3em;
+  font-weight: 600;
+  flex: 1;
+}
+
+.tech-status-icon {
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+
+.tech-description {
+  color: #666;
+  margin: 10px 0;
+  line-height: 1.5;
+  font-size: 0.95em;
+}
+
+.tech-category,
+.tech-difficulty {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 0.9em;
+}
+
+.category-label,
+.difficulty-label {
+  color: #999;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.category-value {
+  color: #1976d2;
+  font-weight: 600;
+  padding: 4px 12px;
+  background: #e3f2fd;
+  border-radius: 12px;
+}
+
+.difficulty-value {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.difficulty-easy {
+  background: #c8e6c9;
+  color: #2e7d32;
+}
+
+.difficulty-medium {
+  background: #ffe0b2;
+  color: #e65100;
+}
+
+.difficulty-hard {
+  background: #ffcdd2;
+  color: #c62828;
+}
+
+.tech-card-footer {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.status-button {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.status-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.status-button.status-completed {
+  background: #4caf50;
+  color: white;
+}
+
+.status-button.status-in-progress {
+  background: #ff9800;
+  color: white;
+}
+
+.status-button.status-not-started {
+  background: #9e9e9e;
+  color: white;
+}
+
+.status-button:active {
+  transform: scale(0.98);
+}
+
+/* НОВОВВЕДЕНИЕ: Стили для дедлайна (Практика 25) */
+.tech-deadline {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 0.9em;
+}
+
+.deadline-label {
+  color: #999;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.deadline-value {
+  color: #ff9800;
+  font-weight: 600;
+}
+
+/* НОВОВВЕДЕНИЕ: Стили для ресурсов (Практика 25) */
+.tech-resources {
+  margin: 10px 0;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.resources-label {
+  display: block;
+  color: #999;
+  font-size: 0.85em;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.resource-link {
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 0.85em;
+  transition: color 0.2s;
+  word-break: break-all;
+}
+
+.resource-link:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+.resources-more {
+  color: #999;
+  font-size: 0.85em;
+  font-style: italic;
+}
+

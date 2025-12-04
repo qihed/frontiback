@@ -1,0 +1,125 @@
+/* ПРАКТИКА 25: Стили для компонента DeadlineForm */
+
+.deadline-form {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.deadline-form h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.form-description {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 0.95em;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.required {
+  color: #f44336;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  transition: border-color 0.2s;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-group select.error,
+.form-group input.error {
+  border-color: #f44336;
+}
+
+.error-message {
+  display: block;
+  color: #f44336;
+  font-size: 0.9em;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.tech-info {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.tech-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.deadline-preview {
+  margin-top: 10px;
+  padding: 10px;
+  background: #e8f5e9;
+  border-radius: 5px;
+  color: #2e7d32;
+  font-size: 0.95em;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.validation-hint {
+  margin-top: 15px;
+  padding: 12px;
+  background: #fff3e0;
+  color: #e65100;
+  border-radius: 8px;
+  border-left: 4px solid #ff9800;
+  font-size: 0.9em;
+  text-align: center;
+}
+

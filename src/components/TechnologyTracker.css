@@ -1,0 +1,93 @@
+/* ПРАКТИКА 19-22: Стили для компонента TechnologyTracker */
+
+.technology-tracker {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tracker-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.tracker-progress-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-filters {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-filters h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+  color: #666;
+}
+
+.filter-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.filter-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.technologies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.tech-card-wrapper {
+  transition: transform 0.2s;
+}
+
+.tech-card-wrapper.selected {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 3px #667eea;
+  border-radius: 12px;
+}
+
+.no-technologies {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-size: 1.2em;
+}
+
+.registration-section {
+  margin-top: 40px;
+}
+

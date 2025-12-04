@@ -1,0 +1,112 @@
+/* ПРАКТИКА 20: Стили для компонента QuickActions */
+
+.quick-actions {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.actions-title {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.3em;
+}
+
+.action-message {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.action-message.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-left: 4px solid #4caf50;
+}
+
+.action-message.info {
+  background: #e3f2fd;
+  color: #1976d2;
+  border-left: 4px solid #2196f3;
+}
+
+.action-message.random {
+  background: #fff3e0;
+  color: #e65100;
+  border-left: 4px solid #ff9800;
+}
+
+.actions-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.action-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.action-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.action-button:disabled {
+  background: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.action-complete {
+  background: #4caf50;
+  color: white;
+}
+
+.action-complete:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.action-reset {
+  background: #ff9800;
+  color: white;
+}
+
+.action-reset:hover:not(:disabled) {
+  background: #f57c00;
+}
+
+.action-random {
+  background: #9c27b0;
+  color: white;
+}
+
+.action-random:hover:not(:disabled) {
+  background: #7b1fa2;
+}
+
+.actions-info {
+  display: flex;
+  gap: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.actions-info strong {
+  color: #333;
+  font-weight: 600;
+}
+
